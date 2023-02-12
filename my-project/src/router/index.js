@@ -1,17 +1,17 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import Home from '../views/Home.vue'
-import List from '../views/List.vue'
+import HomePage from '../views/HomePage.vue'
+import RandomPage from '../views/RandomPage.vue'
 
 const router = createRouter({
   history: createWebHashHistory(),
   routes: [
     {
       path: '/',
-      component: Home
+      component: HomePage
     },
     {
-      path: '/list',
-      component: List
+      path: '/random',
+      component: RandomPage
     },
   ]
 })

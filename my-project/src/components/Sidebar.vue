@@ -9,7 +9,6 @@ export default {
   methods: {
     toggleMenu() {
       this.expanded = !this.expanded
-
       localStorage.setItem('expanded', this.expanded)
     }
   }
@@ -19,7 +18,7 @@ export default {
 <template>
   <aside :class="`${expanded && 'expanded'}`">
     <div class="logo">
-      <img src="../assets/logo.svg" alt="vue">
+      <img src="../assets/logo.svg" alt="vue" />
     </div>
     <div class="menu-toggle-wrap">
       <button class="menu-toggle" @click="toggleMenu">
@@ -33,12 +32,11 @@ export default {
         <span class="material-icons">home</span>
         <span class="text">Home</span>
       </router-link>
-      <router-link class="button" to="/list">
-        <span class="material-icons">format_list_bulleted</span>
-        <span class="text">List</span>
+      <router-link class="button" to="/random">
+        <span class="material-icons">casino</span>
+        <span class="text">Random</span>
       </router-link>
     </div>
-
   </aside>
 </template>
 

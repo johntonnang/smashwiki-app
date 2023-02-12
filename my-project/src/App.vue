@@ -1,21 +1,18 @@
 <script>
-  import GetAmiibo from './components/GetAmiibo.vue'
-  import Sidebar from './components/Sidebar.vue'
+  import SideBar from './components/SideBar.vue'
 
   export default {
     components: {
-      GetAmiibo,
-      Sidebar
+      SideBar
     }
   }
 </script>
 
 <template>
   <div class="app">
-  <Sidebar />
-  <router-view />
-  <GetAmiibo />
-</div>
+    <SideBar />
+    <router-view />
+  </div>
 </template>
 
 <style lang="scss">
