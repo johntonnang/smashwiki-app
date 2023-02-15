@@ -13,7 +13,11 @@ export default {
   },
   methods: {
     nextRoute() {
-    this.$router.push('/search/' + this.nameResult)
+      if (this.nameResult != '') {
+        this.$router.push('/search/' + this.nameResult)
+      } else {
+        this.$router.push('/search/' + 'Anonymous')
+      }
     }
   }
 }
