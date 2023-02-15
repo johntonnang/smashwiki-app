@@ -7,12 +7,6 @@ export default {
       amiiboData: [],
     }
   },
-  props: {
-    exampleText: {
-      type: String,
-      default: ''
-      }
-  },
   methods: {
     getAmiiboData() {
       const url = `https://www.amiiboapi.com/api/amiibo/?name=${this.searchId}`
@@ -24,19 +18,19 @@ export default {
         .catch(error => {
           console.log(error.response)
         })
-    }
+    },
   }
 }
 </script>
 
 <template>
   <main class="home-page">
-    <h1>Search</h1>
     <div>
+      <h1>Hello {{ this.$route.params.id }}</h1>
+      <h1>Enter character</h1>
       <input @keyup.enter="getAmiiboData" type="text" v-model="searchId" />
-      <button @click="getAmiiboData" class="material-icons btn btn-success">search</button>
+      <button @click="getAmiiboData" class="material-icons btn btn-primary">search</button>
       <div v-if="amiiboData">
-        <h2> {{ exampleText }} </h2>
         <ul>
           <li :key="amiibo[0].character" v-for="amiibo in amiiboData">Character: {{ amiibo[0].name }}</li>
           <li :key="amiibo[0].character" v-for="amiibo in amiiboData">Game series: {{ amiibo[0].gameSeries }}</li>
@@ -51,7 +45,13 @@ export default {
 <style lang="scss">
 
   h1 {
-    margin-left: 20px;
+    margin: 20px;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-weight: bold;
+    margin: 20px;
   }
 
   input {

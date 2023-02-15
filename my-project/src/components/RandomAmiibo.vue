@@ -17,6 +17,11 @@ export default {
     })
     return this.amiiboDataList
   },
+  computed: {
+    counter() {
+      return this.$store.state.counter
+    }
+  },
   methods: {
     getAmiiboList() {
       const randomId = this.amiiboDataList.amiibo[Math.floor(Math.random() * this.amiiboDataList.amiibo.length)].name
@@ -29,8 +34,9 @@ export default {
         .catch(error => {
           console.log(error.response)
         })
-        return this.amiiboDataList
+        this.$store.commit('randomCounter')
     }
+
   }
 }
 </script>
@@ -39,7 +45,8 @@ export default {
   <main class="random-page">
     <h1>Random Generator</h1>
     <div>
-      <button @click="getAmiiboList" class="material-icons btn btn-success">casino</button>
+      <button @click="getAmiiboList" class="material-icons btn btn-primary">casino</button>
+      <p>Amount of clicks: {{ counter }}</p>
       <div v-if="amiiboDataList">
         <ul>
           <li :key="amiibo[0].character" v-for="amiibo in amiiboRandom">Character: {{ amiibo[0].name }}</li>
@@ -51,3 +58,11 @@ export default {
     </div>
   </main>
 </template>
+
+<style lang="scss">
+  p {
+    font-weight: bold;
+    margin: 20px;
+    font-size: 1.5rem;
+  }
+</style>

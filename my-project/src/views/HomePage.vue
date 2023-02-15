@@ -1,13 +1,27 @@
 <script>
-  import GetAmiibo from '../components/GetAmiibo.vue'
-
+  import SearchResult from '../components/SearchResult.vue'
+  import CustomEvent from '../components/CustomEvent.vue'
   export default {
     components: {
-      GetAmiibo
-    }
+      SearchResult,
+      CustomEvent
+    },
+    data() {
+      return {
+        nameResult: ''
+      }
+    },
+    methods: {
+      onEnterName(o) {
+        this.nameResult = o
+      }
+    },
   }
 </script>
 
 <template>
-  <GetAmiibo />
+  <div>
+  <SearchResult @enter-name="onEnterName" />
+  <CustomEvent :name-result="nameResult" />
+  </div>
 </template>

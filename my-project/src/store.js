@@ -1,12 +1,13 @@
 import { createStore } from  'vuex'
 
 const mutations = {
-  search(state) {
-    state.searchId = ''
+  randomCounter(state) {
+    state.counter += 1
   }
-},
-state = {
-  searchId: ''
+}
+
+const state = {
+  counter: 0
 }
 
 export default createStore({
