@@ -1,9 +1,0 @@
-För G så ska följande krav uppfyllas:
-
-Webbapplikationen ska publiceras på GitHub Pages (eller liknande)
-Inlämningen ska bestå av ett PDF-dokument som innehåller adresserna till två separata Git repositories: 1) ett repository för källkoden (till exempel vite.config.js, main.js och .vue-filerna) och 2) ett repository för den publicerade “produktionsvarianten” av projektet (GitHub Pages-filerna)
-Om ditt repository är privat, bjud då in användaren "jonkri" på GitHub/GitLab
-
-För VG ska kraven för G vara uppfyllda. Dessutom ska följande krav uppfyllas:
-
-Använd minst ett Vue Router-adressparametervärde
