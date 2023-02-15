@@ -45,7 +45,7 @@ export default {
   <main class="random-page">
     <h1>Random Generator</h1>
     <div>
-      <button @click="getAmiiboList" class="material-icons btn btn-primary">casino</button>
+      <button @click="getAmiiboList" class="btn btn-primary">Random</button>
       <p>Amount of clicks: {{ counter }}</p>
       <div v-if="amiiboDataList">
         <ul>

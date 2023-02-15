@@ -28,7 +28,7 @@ export default {
   <main class="home-page">
     <div>
       <h1>Name: {{ nameResult ? nameResult : 'Anonymous' }}</h1>
-      <button @click="nextRoute" class="material-icons">chevron_right</button>
+      <button @click="nextRoute" class="btn btn-primary">Next</button>
     </div>
 </main>
 </template>

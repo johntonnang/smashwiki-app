@@ -29,7 +29,7 @@ export default {
       <h1>Hello {{ this.$route.params.id }}</h1>
       <h1>Enter character</h1>
       <input @keyup.enter="getAmiiboData" type="text" v-model="searchId" />
-      <button @click="getAmiiboData" class="material-icons btn btn-primary">search</button>
+      <button @click="getAmiiboData" class="btn btn-primary">Search</button>
       <div v-if="amiiboData">
         <ul>
           <li :key="amiibo[0].character" v-for="amiibo in amiiboData">Character: {{ amiibo[0].name }}</li>
