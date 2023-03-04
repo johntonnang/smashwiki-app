@@ -1,4 +1,4 @@
-import { createStore } from  'vuex'
+import { createStore } from 'vuex'
 
 const mutations = {
   randomCounter(state) {
@@ -11,7 +11,7 @@ const state = {
 }
 
 export default createStore({
-   mutations,
-   state,
-   strict: true
+  mutations,
+  state,
+  strict: true
 })

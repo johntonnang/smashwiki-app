@@ -2,11 +2,11 @@
   import GetAmiibo from '../components/GetAmiibo.vue'
   export default {
     components: {
-      GetAmiibo,
+      GetAmiibo
     }
   }
 </script>
 
 <template>
-   <GetAmiibo />
+  <GetAmiibo />
 </template>

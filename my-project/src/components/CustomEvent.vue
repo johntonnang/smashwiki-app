@@ -1,27 +1,25 @@
 <script>
-export default {
-  data() {
-    return {
-    }
-  },
-  props: {
-    nameResult: {
-      type: String,
-      default: 'Anonymous',
-      required: true
-    }
-  },
-  methods: {
-    nextRoute() {
-      if (this.nameResult != '') {
-        this.$router.push('/search/' + this.nameResult)
-      } else {
-        this.$router.push('/search/' + 'Anonymous')
+  export default {
+    data() {
+      return {}
+    },
+    props: {
+      nameResult: {
+        type: String,
+        default: 'Anonymous',
+        required: true
+      }
+    },
+    methods: {
+      nextRoute() {
+        if (this.nameResult != '') {
+          this.$router.push('/search/' + this.nameResult)
+        } else {
+          this.$router.push('/search/' + 'Anonymous')
+        }
       }
     }
   }
-}
-
 </script>
 
 <template>
@@ -30,5 +28,5 @@ export default {
       <h1>Name: {{ nameResult ? nameResult : 'Anonymous' }}</h1>
       <button @click="nextRoute" class="btn btn-primary">Next</button>
     </div>
-</main>
+  </main>
 </template>

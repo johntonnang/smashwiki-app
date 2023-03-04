@@ -15,13 +15,13 @@
       onEnterName(o) {
         this.nameResult = o
       }
-    },
+    }
   }
 </script>
 
 <template>
   <div>
-  <SearchResult @enter-name="onEnterName" />
-  <CustomEvent :name-result="nameResult" />
+    <SearchResult @enter-name="onEnterName" />
+    <CustomEvent :name-result="nameResult" />
   </div>
 </template>

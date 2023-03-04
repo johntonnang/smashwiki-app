@@ -1,18 +1,18 @@
 <script>
-import { ref } from 'vue'
-export default {
-  data() {
-    return {
-      expanded: ref(localStorage.getItem('expanded') === 'true')
+  import { ref } from 'vue'
+  export default {
+    data() {
+      return {
+        expanded: ref(localStorage.getItem('expanded') === 'true')
+      }
+    },
+    methods: {
+      toggleMenu() {
+        this.expanded = !this.expanded
+        localStorage.setItem('expanded', this.expanded)
+      }
     }
-  },
-  methods: {
-    toggleMenu() {
-      this.expanded = !this.expanded
-      localStorage.setItem('expanded', this.expanded)
-    }
-  },
-}
+  }
 </script>
 
 <template>
@@ -54,7 +54,7 @@ export default {
     overflow: hidden;
     min-height: 100vh;
     padding: 1rem;
-    transition: .2s ease-out;
+    transition: 0.2s ease-out;
 
     .logo {
       margin-bottom: 1rem;
@@ -70,36 +70,36 @@ export default {
       margin-bottom: 1rem;
       position: relative;
       top: 0;
-      transition: .2s ease-out;
+      transition: 0.2s ease-out;
 
       .menu-toggle {
-        transition: .2s ease-out;
+        transition: 0.2s ease-out;
 
         .material-icons {
           font-size: 2rem;
           color: var(--light);
-          transition: .2s ease-out;
+          transition: 0.2s ease-out;
         }
 
         &:hover {
           .material-icons {
             color: var(--primary);
-            transform: translateX(.2rem);
+            transform: translateX(0.2rem);
           }
         }
       }
     }
 
-
-    h3, .button .text {
+    h3,
+    .button .text {
       opacity: 0;
-      transition: .3s ease-out;
+      transition: 0.3s ease-out;
     }
 
     h3 {
       color: var(--grey);
       font-size: 1rem;
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
       text-transform: uppercase;
     }
 
@@ -110,30 +110,32 @@ export default {
         display: flex;
         align-items: center;
         text-decoration: none;
-        padding: .5rem 1rem;
-        transition: .2s ease-out;
+        padding: 0.5rem 1rem;
+        transition: 0.2s ease-out;
 
         .material-icons {
           font-size: 2rem;
           color: var(--light);
-          transition: .2s ease-out;
+          transition: 0.2s ease-out;
         }
 
         .text {
           color: var(--light);
-          transition: .2s ease-out;
+          transition: 0.2s ease-out;
         }
 
-        &:hover, &.router-link-exact-active {
+        &:hover,
+        &.router-link-exact-active {
           background-color: var(--dark-alt);
 
-          .material-icons, .text {
+          .material-icons,
+          .text {
             color: var(--primary);
           }
         }
 
         &.router-link-exact-active {
-          border-right: 5px solid var(--primary)
+          border-right: 5px solid var(--primary);
         }
       }
     }
@@ -149,8 +151,9 @@ export default {
         }
       }
 
-      h3, .button .text {
-      opacity: 1;
+      h3,
+      .button .text {
+        opacity: 1;
       }
 
       .button {
